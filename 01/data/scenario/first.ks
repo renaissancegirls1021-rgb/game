@@ -88,6 +88,18 @@ Sound will play!　Click or tap to start.[r]
 [freeimage layer="1"]
 
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+;スマホ判定
+;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+[iscript]
+f.smartphone = /Android|iPhone|iPod|iPad/i.test(navigator.userAgent);
+[endscript]
+
+;スマホの時、デフォのフォントサイズを28に
+[if exp ="f.smartphone == true"]
+[deffont size="30"]
+[endif]
+
+;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 ;プラグインとマクロ読み込み
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
