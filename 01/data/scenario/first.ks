@@ -11,10 +11,6 @@
 [eval exp="f.debug_mute = true"]
 [eval exp="f.debug_mute = false"]
 
-;オープニング trueで再生する
-[eval exp="f.debug_op = true"]
-[eval exp="f.debug_op = false"]
-
 ;デフォ音量設定
 [seopt volume="20"]
 [bgmopt volume="20"]
@@ -24,6 +20,9 @@
 [bgmopt volume="0"]
 [endif]
 
+;英語版開発
+[eval exp="f.en = true"]
+;[eval exp="f.en= false"]
 
 
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
@@ -51,12 +50,42 @@ localStorage.clear();
 ;タップしてスタート
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
+[delay speed="5"]
 [font size="40" bold="true" color="white"]
 [nolog]
-音が出ます！[r]
-クリックかタップしてスタート[p]
+Sound will play!　Click or tap to start.[r]
+音が出ます！　クリックかタップしてスタート[p]
 [endnolog]
 [resetfont]
+[resetdelay]
+
+[cm]
+[layopt layer ="message0" visible ="false"]
+
+;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+;言語選択
+;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+[layopt layer ="1" visible ="true"]
+[ptext layer ="1"  text ="言語選択</br>Language Select" width="960" size ="40" x ="0" y ="100" color ="white" align="center"]
+
+[glink color="op_start_btn" width="300" target="*jp" text="日本語" y="280"]
+[glink color="op_start_btn" width="300" target="*en" text="English" y="400"]
+
+[s]
+
+*en
+[eval exp="f.en = true"]
+[jump target ="*next"]
+[s]
+
+*jp
+[eval exp="f.en = false"]
+[jump target ="*next"]
+[s]
+
+*next
+[freeimage layer="1"]
 
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 ;プラグインとマクロ読み込み
@@ -87,9 +116,25 @@ localStorage.clear();
 [popopo volume="10" type="triangle"  time="100" frequency="G"]
 ;[popopo type="none"]
 
+[if exp ="f.en == true"]
+;英語版は10
+[delay speed="10"]
+[else]
+;日本語版は30
+[delay speed="30"]
+[endif]
+
+;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+;スキップ、オートグリフ
+;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+
+[if exp ="f.en == true"]
+[glyph_auto line="auto_disp_en.png" fix="true" left="-10" top="50" folder="image"]
+[glyph_skip line="skip_disp_en.png" fix="true" left="-10" top="50" folder="image"]
+[else]
 [glyph_auto line="auto_disp.png" fix="true" left="-10" top="50" folder="image"]
 [glyph_skip line="skip_disp.png" fix="true" left="-10" top="50" folder="image"]
-
+[endif]
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 ;キャラ定義
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
@@ -138,7 +183,11 @@ f.tips_text = [];
 ;[jump storage ="sandbox.ks"]
 
 ;会話本文ページ
-[jump storage ="talk/test.ks"]
+[if exp ="f.en == true"]
+[jump storage ="main_en.ks"]
+[else]
+[jump storage ="main_jp.ks"]
+[endif]
 
 [s]
 
