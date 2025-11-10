@@ -21,7 +21,7 @@
 ;デバッグ
 ;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 ;デバッグ用
-;[jump target ="*tip"]
+[jump target ="*tip"]
 
 ;オープニング trueで再生する
 [eval exp="f.debug_op = true"]
@@ -332,7 +332,7 @@ Moreover, her paintings aren’t selling well.[p]
 [ptext name="title,line_spacing_large" layer ="2" text ="Van Gogh sold very few paintings</br>during his lifetime." size ="48" width="900" x ="30" y ="48" color ="black" face ="kei" align ="center"]
 
 [html left="0" top="180"]
-<div class="box">
+<div class="box_en">
 <p>It is well known in Japan that Van Gogh sold very few paintings during his lifetime.</p>
 <p>However, the famous story that "he only sold one painting during his lifetime" seems to be a slight exaggeration, and it is said that there is evidence that <span class="html_red">he actually sold several works, including drawings.</span></p>
 <p>However, most of the works he sold have no photographs or other records remaining, and the only one that remains clearly recorded is an oil painting called <span class="html_red">"Red Vineyard."</span></p>

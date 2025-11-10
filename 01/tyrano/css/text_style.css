@@ -43,3 +43,30 @@ font-size: 1.5em;
     line-height: 1.2em;
   }
 }
+
+
+.box_en{
+  margin: auto;
+  width: 90%;
+  color: black;
+  font-family: "meiryo";
+font-size: 1.5em;
+  line-height: 1.5em;
+  text-indent: 1em;
+  text-align: justify;
+}
+
+/*Xタイムラインサイズ*/
+@media screen and (max-width: 510px) {
+  .box_en {
+  font-size: 1.6em;
+      line-height: 1.2em;
+  }
+}
+/*スマホサイズ*/
+@media screen and (max-width: 375px) {
+  .box_en {
+  font-size: 1.8em;
+    line-height: 1.2em;
+  }
+}
