@@ -325,7 +325,7 @@
 ;背景
 [bg storage="white_frame.png" time="0"]
 
-[playbgm storage="ending.wav" volume="70"]
+[playbgm storage="ending.wav" volume="70" loop="false"]
 
 ;マスク
 [wait time="200"]
