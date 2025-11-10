@@ -11,6 +11,7 @@
 [preload storage="data/bgm/oikakekko.mp3" wait="true"]
 [preload storage="data/bgm/Onigiri.mp3" wait="true"]
 [preload storage="data/bgm/op.mp3" wait="true"]
+[preload storage="data/bgm/ending.wav" wait="true"]
 
 ;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 ;効果音
@@ -18,7 +19,6 @@
 [preload storage="data/sound/bishi.mp3" wait="true"]
 [preload storage="data/sound/bomb.mp3" wait="true"]
 [preload storage="data/sound/bomb_2.mp3" wait="true"]
-[preload storage="data/sound/ending.wav" wait="true"]
 [preload storage="data/sound/kira.mp3" wait="true"]
 [preload storage="data/sound/shock.mp3" wait="true"]
 
@@ -42,6 +42,20 @@
 [preload storage="data/others/plugin/manpu/sound/se7.mp3" wait="true"]
 [preload storage="data/others/plugin/manpu/sound/se8.mp3" wait="true"]
 [preload storage="data/others/plugin/manpu/sound/se9.mp3" wait="true"]
+
+
+;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+;汎用画像
+;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+[preload storage="data/image/frame.png" wait="true"]
+[preload storage="data/image/button/auto.png" wait="true"]
+[preload storage="data/image/button/auto_en.png" wait="true"]
+[preload storage="data/image/button/skip.png" wait="true"]
+[preload storage="data/image/button/skip_en.png" wait="true"]
+
+[preload storage="data/fgimage/logo.png" wait="true"]
+
+
 
 ;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 ;動画

@@ -24,6 +24,26 @@
 [eval exp="f.en = true"]
 ;[eval exp="f.en= false"]
 
+;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+;スマホ判定
+;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+[iscript]
+f.smartphone = /Android|iPhone|iPod|iPad/i.test(navigator.userAgent);
+[endscript]
+
+;スマホ
+[eval exp="f.debug_smart = true"]
+[eval exp="f.debug_smart = false"]
+
+[if exp ="f.debug_smart == true"]
+[eval exp="f.smartphone = true"]
+[endif]
+
+;スマホの時、デフォのフォントサイズを28に
+[if exp ="f.smartphone == true"]
+[deffont size="30"]
+[endif]
+
 
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 ;セーブデータ削除
@@ -86,18 +106,6 @@ Sound will play!　Click or tap to start.[r]
 
 *next
 [freeimage layer="1"]
-
-;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-;スマホ判定
-;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
-[iscript]
-f.smartphone = /Android|iPhone|iPod|iPad/i.test(navigator.userAgent);
-[endscript]
-
-;スマホの時、デフォのフォントサイズを28に
-[if exp ="f.smartphone == true"]
-[deffont size="30"]
-[endif]
 
 ;★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 ;プラグインとマクロ読み込み

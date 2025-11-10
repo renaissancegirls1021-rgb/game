@@ -34,10 +34,25 @@
 ;オープニング
 [if exp ="f.debug_op == true"]
 
+;スマホの時
+[if exp ="f.smartphone == true"]
+[layopt layer ="1" visible ="true"]
+[playbgm storage="op.mp3" loop="false"]
+[bg storage="black_flame.png" time="100"]
+[image name="logo" layer ="1" storage ="logo.png" width="600" top ="80" left ="180" time="100"]
+[wait time="1000"]
+[anim name="logo" top="-=600" time="500"]
+[wait time="500"]
+[free layer="1" name="logo" time="0"]
+[bg storage="white_frame.png" time="500"]
+[wait time="500"]
+
+;スマホでない時
+[else]
 ;背景動画再生
 [bgmovie storage="title.mp4" loop="false" volume="30"]
-
 [wait time="3000"]
+[endif]
 
 ;タイトル表示
 [image name="title" layer ="1" storage ="logo.png" width="200" top ="50" left ="380" page="back" time="0"]
@@ -305,7 +320,7 @@ Moreover, her paintings aren’t selling well.[p]
 ;背景
 [bg storage="white_frame.png" time="0"]
 
-[playse storage="ending.wav" volume="70"]
+[playbgm storage="ending.wav" volume="70"]
 
 ;マスク
 [wait time="200"]
