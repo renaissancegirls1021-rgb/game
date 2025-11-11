@@ -9,7 +9,7 @@
 
 ;音楽再生
 [eval exp="f.debug_mute = true"]
-;[eval exp="f.debug_mute = false"]
+[eval exp="f.debug_mute = false"]
 
 ;デフォ音量設定
 [seopt volume="20"]
