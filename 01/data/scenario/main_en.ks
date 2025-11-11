@@ -21,7 +21,7 @@
 ;デバッグ
 ;＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 ;デバッグ用
-;[jump target ="*tip"]
+[jump target ="*tip"]
 
 ;オープニング trueで再生する
 [eval exp="f.debug_op = true"]
